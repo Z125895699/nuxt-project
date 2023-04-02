@@ -1,3 +1,11 @@
+/*
+ * @Author: zhangdi 1258956799@qq.com
+ * @Date: 2023-04-02 20:57:05
+ * @LastEditors: zhangdi 1258956799@qq.com
+ * @LastEditTime: 2023-04-02 21:15:59
+ * @FilePath: /my-project/nuxt.config.js
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ */
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -39,5 +47,10 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+    // 设置输出目录
+    distDir: 'dist'
+  },
+  hooks: {
+    'pre-commit': 'yarn cz'
   }
 }
